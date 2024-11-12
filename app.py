@@ -209,7 +209,7 @@ def chat_interface():
     # Sidebar for logo, document upload and session management
     with st.sidebar:
         # Add the logo at the top of the sidebar
-        logo = Image.open("AgroPro.jepg")
+        logo = Image.open("AgroPro.jpeg")
         st.image(logo, width=150)  # Adjust width as needed
 
         st.markdown("""
