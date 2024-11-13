@@ -284,12 +284,12 @@ def chat_interface():
             st.markdown(f"{message['content']} - {message['time']}")
 
     # React to user input
-    if prompt := st.chat_input("Ask Efiko about any subject..."):
+    if prompt := st.chat_input("Ask AgroPro about any subject..."):
         st.chat_message("user").markdown(f"{prompt} - {get_current_time()}")
         st.session_state.messages.append({"role": "user", "content": prompt, "time": get_current_time()})
         st.session_state.conversation_buffer.add_message("user", prompt)
 
-        with st.spinner("Efiko is thinking..."):
+        with st.spinner("AgroPro is thinking..."):
             vectorstore = st.session_state.vectorstore
             response = get_gemini_response(st.session_state.conversation_buffer, prompt, vectorstore)
 
